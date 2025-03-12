@@ -1,0 +1,260 @@
+/*
+rgb(255, 255, 255);
+rgb(255, 0, 0);
+rgb(133, 133, 133);
+rgb(0, 0, 0);
+*/
+
+/* general */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lora', serif;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+html {
+    min-height: 700px;
+    position: relative;
+}
+
+a:hover {
+    color: rgb(197, 59, 59)
+}
+
+.horizontalize {
+    display: flex;
+}
+
+/* barra de navigacion */
+#navbar {
+    position: fixed;
+    width: 99.8vw;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(199, 199, 199, 0.288);
+    box-shadow: 0px 0px 10px rgba(199, 199, 199, 0.582);
+    
+    
+}
+
+#navName {
+    float: left;
+    margin-right: 5%;
+    font-size: 25px;
+}
+
+#navPages {
+    display: inline-flex;
+    font-size: 22px;
+}
+
+#navPages > * {
+    margin-right: 30px;
+    color: black;
+}
+
+#ofertas {
+    color: rgb(224, 89, 89);
+}
+
+#navOpts {
+    float: right;
+}
+
+#searchIcon {
+    width: 169px;
+    height: 29.5px;
+}
+
+#normalIcon {
+    width: 32px;
+    height: 32px;
+}
+
+#langChange {
+    margin-left: 10px;
+    margin-right: 50px;
+    transform: scale(0.9);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0);
+    user-select: none;
+    z-index: 30;
+}
+
+.dropdown-label img {
+    width: 32px;
+    height: 32px;
+    z-index: 30;
+}
+
+#selectedLang {
+    font-weight: bold;
+    z-index: 30;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    list-style: none;
+    z-index: -10;
+    display: none;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.dropdown-menu li:hover {
+    background: rgba(99, 99, 99, 0.555);
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+#footbar {
+    font-size: 20px; /* Reducir tamaño */
+    justify-content: center;
+    background-color: #efebe7;
+    padding: 10px 15px; /* Ajustar espacio interno */
+}
+
+#footbar > *{
+    position: relative;
+    margin-right: 20px; /* Aumentar separación */
+    color: black;
+}
+#footbar > a {
+    margin-top: 50px;
+}
+
+
+#mainBgImage {
+    display: block;
+    background-image: url(../img/imagenFundal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    top: -1px;
+    height: 110vh;
+    z-index: -10;
+}
+
+#bgImage {
+    display: block;
+    background-image: url(../img/fondo\ blanco\ brisella.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    top: -1px;
+    height: 110vh;
+    z-index: -10;
+}
+
+#mainNews {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#mainNews {
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(199, 199, 199, 0.582); /* Sombra similar a la barra de navegación */
+    margin-top: 20px; /* Espacio desde la imagen de fondo */
+    padding-top: 20px; /* Espacio interno superior */
+    padding-bottom: 20px; /* Espacio interno inferior */
+}
+
+#mainNews article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mainNews p {
+    margin-bottom: 10px; /* Espacio entre párrafos */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    color: rgb(0, 0, 0); /* Color de texto negro */
+}
+
+#mainNews p:first-child {
+    font-size: 24px; /* Tamaño de fuente para el título */
+    margin-bottom: 20px; /* Espacio después del título */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(199, 199, 199, 0.582);
+}
+
+section h2 {
+    margin-top: 0;
+    font-family: 'Lora', serif;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+
+
